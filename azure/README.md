@@ -16,12 +16,15 @@ $Env:ARM_CLIENT_SECRET = "<PASSWORD_VALUE>"
 $Env:ARM_SUBSCRIPTION_ID = "<SUBSCRIPTION_ID>"
 $Env:ARM_TENANT_ID = "<TENANT_VALUE>"
 
-Create resource group with terraform (main.tf):
+Create resources with terraform (main.tf):
 terraform init
 terraform fmt
 terraform validate
 terraform apply
 
-Inspect the resource group:
+Inspect the resources:
 terraform show
 terraform state list
+
+Delete the resources:
+terraform destroy

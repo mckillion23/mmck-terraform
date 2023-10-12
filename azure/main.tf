@@ -17,6 +17,10 @@ provider "azurerm" {
 resource "azurerm_resource_group" "rg" {
   name     = "rg-terraform"
   location = "northeurope"
+  tags = {
+    Environment = "terraform"
+    Owner       = "Mark Mckillion"
+  }
 }
 
 # Create a virtual network
