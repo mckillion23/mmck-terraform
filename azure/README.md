@@ -26,5 +26,8 @@ Inspect the resources:
 terraform show
 terraform state list
 
+Overwrite variables command line:
+terraform apply -var "resource_group_name=myNewResourceGroupName"
+
 Delete the resources:
 terraform destroy

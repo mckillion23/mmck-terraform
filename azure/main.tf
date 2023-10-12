@@ -15,7 +15,7 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "rg" {
-  name     = "rg-terraform"
+  name     = var.resource_group_name
   location = "northeurope"
   tags = {
     Environment = "terraform"
