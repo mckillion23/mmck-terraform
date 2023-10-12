@@ -18,3 +18,11 @@ resource "azurerm_resource_group" "rg" {
   name     = "rg-terraform"
   location = "northeurope"
 }
+
+# Create a virtual network
+resource "azurerm_virtual_network" "vnet" {
+  name                = "vnet-terraform"
+  address_space       = ["10.0.0.0/16"]
+  location            = "northeurope"
+  resource_group_name = azurerm_resource_group.rg.name
+}
